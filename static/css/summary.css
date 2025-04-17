@@ -1,0 +1,371 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E5D0CC;
+    color: #333;
+  }
+  
+  header {
+    background-color: #172121;
+    color: white;
+    padding: 1rem 2rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  
+  .back-button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+  }
+  .back-button:hover{
+    font-size: 17px;
+    transition: font-size 0.3s ease;
+  }
+  /* Main Container */
+  .result-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Score Summary */
+  .score-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .score-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .progress-ring-circle {
+    transition: stroke-dashoffset 0.5s ease;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  
+  .score-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #7F7B82;
+  }
+  
+  .score-details {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .score-details h2 {
+    margin-top: 0;
+    color: #7F7B82;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .detail-label {
+    font-weight: bold;
+  }
+  
+  .detail-value {
+    font-weight: bold;
+  }
+  
+  .correct {
+    color: #4caf50;
+  }
+  
+  .incorrect {
+    color: #f44336;
+  }
+  
+  .difficulty-easy {
+    color: #2e7d32;
+    background-color: #c8e6c9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .difficulty-medium {
+    color: #f57f17;
+    background-color: #fff9c4;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .difficulty-hard {
+    color: #c62828;
+    background-color: #ffcdd2;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  /* Answer Breakdown */
+  .answer-breakdown {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .answer-breakdown h2 {
+    margin-top: 0;
+    color: #7F7B82;
+  }
+  
+  .breakdown-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .breakdown-header {
+    font-weight: bold;
+    padding: 0.75rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  .breakdown-item {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+    display: contents;
+  }
+  
+  .breakdown-item > * {
+    padding: 0.75rem;
+  }
+  
+  .breakdown-item.correct > *:last-child {
+    color: #4caf50;
+  }
+  
+  .breakdown-item.incorrect > *:last-child {
+    color: #f44336;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .action-button {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .action-button {
+    background-color: #BFACB5;
+    color: white;
+  }
+  
+  .action-button:hover {
+    background-color: #7b6f74;
+  }
+  
+  .action-button.secondary {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .action-button.secondary:hover {
+    background-color: #bdbdbd;
+  }
+  
+  /* Improvement Tips */
+  .improvement-tips {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .improvement-tips h2 {
+    margin-top: 0;
+    color: #7F7B82;
+  }
+  
+  .tip-card {
+    background-color: #f5f5f5;
+    border-left: 4px solid #7F7B82;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .tip-card h3 {
+    margin-top: 0;
+  }
+  
+  .tip-card code {
+    background-color: #e0e0e0;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .share-options {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .social-share {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .social-share.facebook {
+    background-color: #3b5998;
+  }
+  
+  .social-share.twitter {
+    background-color: #000000;
+  }
+  
+  .social-share.linkedin {
+    background-color: #0077b5;
+  }
+  
+  .share-link {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .share-link input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .share-link button {
+    padding: 0 1.5rem;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .score-summary {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .breakdown-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .breakdown-header {
+      display: none;
+    }
+    
+    .breakdown-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    
+    .breakdown-item > *::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #666;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .action-button {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Quiz App</title>
+  <link rel="stylesheet" href="{% static 'css/login-container.css' %}">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="logo">
+        <img src="logo.png" alt="Quiz App Logo">
+      </div>
+      <h1>Welcome Back</h1>
+      
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username or Email</label>
+          <input type="text" id="username" name="username" required autocomplete="username">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password">
+          <div class="password-toggle" id="toggle-password">👁️</div>
+        </div>
+        
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember"> Remember me
+          </label>
+          <a href="forgot_password.html" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="login-button">Log In</button>
+        
+        <div class="divider">or</div>
+        
+        <button type="button" class="social-login google">
+          <img src="googlelogo.png" alt="Google logo"> Continue with Google
+        </button>
+        
+        <p class="signup-link">Don't have an account? <a href="register.html">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

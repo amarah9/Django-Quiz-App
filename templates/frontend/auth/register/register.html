@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Quiz App</title>
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-card">
+      <div class="logo">
+        <img src="logo.png" alt="Quiz App Logo">
+      </div>
+      <h1>Create Your Account</h1>
+      
+      <form id="register-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="new-password">
+          <div class="password-toggle" id="toggle-password">👁️</div>
+          <div class="password-strength" id="password-strength"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password">
+          <div class="password-toggle" id="toggle-confirm-password">👁️</div>
+          <div class="password-match" id="password-match"></div>
+        </div>
+        
+        <div class="form-options">
+          <label class="terms">
+            <input type="checkbox" name="terms" required>
+            <pre>I agree to the <a href="terms.html"><strong>of Service</strong></a> and <a href="privacy.html"><strong>Policy</strong></a></pre>
+          </label>
+        </div>
+        
+        <button type="submit" class="register-button">Create Account</button>
+        
+        <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="{% static 'js/register.js' %}"></script>
+</body>
+</html>

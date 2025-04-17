@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Question</title>
+  <link rel="stylesheet" href="take_quiz.css">
+</head>
+<body>
+  <header>
+    <div class="quiz-header">
+      <h1 id="quiz-title">Quiz Name</h1>
+      <div class="quiz-meta">
+        <span class="timer" id="timer">00:30</span>
+        <span class="question-count" id="question-count">1/10</span>
+      </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quiz-form">
+      <div class="question-container">
+        <h2 id="question-text">Question text goes here?</h2>
+        <div class="options-container" id="options-container">
+          <!-- Options will be dynamically inserted here -->
+        </div>
+      </div>
+
+      <div class="navigation-buttons">
+        <button type="button" id="prev-btn" class="nav-button" disabled>Previous</button>
+        <button type="button" id="next-btn" class="nav-button">Next</button>
+        <button type="button" id="submit-btn" class="nav-button submit-button" hidden>Submit Quiz</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="take_quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Detail</title>
+  <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+  <header>
+    <a href="dashboard.html" class="back-button">← Back to Quizzes</a>
+    <h1 id="quiz-title">Quiz Title</h1>
+  </header>
+
+  <main class="quiz-detail-container">
+    <section class="quiz-info">
+      <img src="https://via.placeholder.com/800x400?text=Quiz+Image" alt="Quiz Cover" class="quiz-cover">
+      <div class="quiz-meta">
+        <span class="difficulty-badge" id="difficulty">Medium</span>
+        <span class="questions-count">10 Questions</span>
+      </div>
+      <div class="quiz-description">
+        <h2>Description</h2>
+        <p id="quiz-description-text">This is a detailed description of what the quiz covers and what users can expect.</p>
+      </div>
+      <div class="quiz-rules">
+        <h2>Rules</h2>
+        <ul>
+          <li>Each question has a time limit of 30 seconds</li>
+          <li>You can't go back to previous questions</li>
+          <li>Points are awarded based on speed and accuracy</li>
+        </ul>
+      </div>
+      <button id="start-quiz-btn" class="start-button">Start Quiz</button>
+    </section>
+
+    <section class="quiz-stats">
+      <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        <div class="leaderboard-content">
+          <div class="leaderboard-item">
+            <span class="rank">1</span>
+            <span class="user">JohnDoe</span>
+            <span class="score">95%</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">2</span>
+            <span class="user">JaneSmith</span>
+            <span class="score">92%</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">3</span>
+            <span class="user">BobJohnson</span>
+            <span class="score">89%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="your-stats">
+        <h2>Your Previous Attempts</h2>
+        <div class="attempts-list">
+          <div class="attempt-item">
+            <span class="date">2023-05-15</span>
+            <span class="score">85%</span>
+          </div>
+          <div class="attempt-item">
+            <span class="date">2023-04-28</span>
+            <span class="score">78%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="detail.js"></script>
+</body>
+</html>

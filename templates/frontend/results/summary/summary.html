@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="summary.css">
+</head>
+<body>
+  <header>
+    <h1>Quiz Results</h1>
+    <a href="dashboard.html" class="back-button">← Back to Dashboard</a>
+  </header>
+
+  <main class="result-container">
+    <section class="score-summary">
+      <div class="score-circle">
+        <svg class="progress-ring" width="200" height="200">
+          <circle class="progress-ring-circle" stroke="#e0e0e0" stroke-width="12" fill="transparent" r="80" cx="100" cy="100"/>
+          <circle class="progress-ring-circle progress-ring-progress" stroke="#4caf50" stroke-width="12" stroke-dasharray="502.4" stroke-dashoffset="251.2" fill="transparent" r="80" cx="100" cy="100"/>
+        </svg>
+        <div class="score-percentage">85%</div>
+      </div>
+      <div class="score-details">
+        <h2>JavaScript Fundamentals</h2>
+        <div class="detail-item">
+          <span class="detail-label">Correct Answers:</span>
+          <span class="detail-value correct">8/10</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Time Taken:</span>
+          <span class="detail-value">4:32</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Difficulty:</span>
+          <span class="detail-value difficulty-medium">Medium</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="answer-breakdown">
+      <h2>Answer Breakdown</h2>
+      <div class="breakdown-grid">
+        <div class="breakdown-header">
+          <span>Question</span>
+          <span>Your Answer</span>
+          <span>Correct Answer</span>
+          <span>Status</span>
+        </div>
+        <div class="breakdown-item correct">
+          <span>1. Which keyword declares a variable?</span>
+          <span>let</span>
+          <span>let</span>
+          <span>✓ Correct</span>
+        </div>
+        <div class="breakdown-item incorrect">
+          <span>2. What does === operator do?</span>
+          <span>Compares values</span>
+          <span>Compares value and type</span>
+          <span>✗ Incorrect</span>
+        </div>
+        <!-- More items would be dynamically added -->
+      </div>
+    </section>
+
+    <section class="action-buttons">
+      <button id="view-report-btn" class="action-button">View Detailed Report</button>
+      <button id="retry-quiz-btn" class="action-button secondary">Retry Quiz</button>
+      <button id="share-result-btn" class="action-button">Share Result</button>
+    </section>
+
+    <section class="improvement-tips">
+      <h2>Improvement Tips</h2>
+      <div class="tip-card">
+        <h3>Variables and Scope</h3>
+        <p>You missed 2 questions about variable declarations. Remember:</p>
+        <ul>
+          <li><code>var</code> has function scope</li>
+          <li><code>let</code> and <code>const</code> have block scope</li>
+          <li><code>const</code> cannot be reassigned</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="share-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Share Your Result</h2>
+      <div class="share-options">
+        <button class="social-share facebook">Facebook</button>
+        <button class="social-share twitter"><img src="Xlogo.png" width="20" height="20" alt="X"></button>
+        <button class="social-share linkedin">LinkedIn</button>
+      </div>
+      <div class="share-link">
+        <input type="text" id="share-url" value="https://quizapp.com/results/123" readonly>
+        <button id="copy-link-btn">Copy Link</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="summary.js"></script>
+</body>
+</html>
